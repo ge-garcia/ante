@@ -1,10 +1,16 @@
 # Running
 
-There are two distinct profiles: `docker-compose.dev.yml` and
-`docker-compose.prod.yml`.
+# Environment
 
-```bash
-docker compose -f docker-compose.dev.yml up
+Example `.env.development`
 
-docker compose -f docker-compose.prod.yml up
+```
+NODE_ENV=development
+API_PORT=8080
+DB_PORT=5432
+POSTGRES_DB=dev_db
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+RESTART_POLICY=no
+DATABASE_URL=postgres://postgres:postgres@localhost:5432/dev_db
 ```
